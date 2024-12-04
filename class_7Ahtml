@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klasa 7-A</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="content">
+        <h1>Klasa 7-A</h1>
+        <button id="createPostButton">Utwórz post</button>
+        <button id="showListButton">Lista uczniów</button>
+        <button id="reportProblemsButton">Zgłoś problem</button>
+    </div>
+
+    <script>
+        document.getElementById('createPostButton').addEventListener('click', () => {
+            // Show post creation form or functionality based on user role
+            const user = JSON.parse(localStorage.getItem('users')).find(u => u.username === 'sk');  // Dummy check for user role
+            if (user) {
+                alert('Możesz stworzyć post!');
+            } else {
+                alert('Nie masz uprawnień do tworzenia postów!');
+            }
+        });
+
+        document.getElementById('showListButton').addEventListener('click', () => {
+            alert('Lista uczniów w klasie 7-A');
+        });
+
+        document.getElementById('reportProblemsButton').addEventListener('click', () => {
+            window.location.href = 'mailto:baseofclassessp4@gmail.com';
+        });
+    </script>
+</body>
+</html>

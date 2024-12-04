@@ -9,12 +9,13 @@
 <body>
     <div class="content">
         <h1>Witaj na stronie głównej</h1>
+        <p>Wybierz jedną z opcji:</p>
         <button id="loginButton" class="btn">Logowanie</button>
         <button id="createAccountButton" class="btn">Stwórz konto</button>
     </div>
 
     <!-- Modal do stworzenia konta -->
-    <div id="createAccountModal" class="modal">
+    <div id="createAccountModal" class="modal hidden">
         <div class="modal-content">
             <h2>Stwórz konto</h2>
             <form id="createAccountForm">
@@ -31,6 +32,17 @@
                 <button type="button" onclick="closeModal()" class="btn">Anuluj</button>
             </form>
             <p id="error-message"></p>
+        </div>
+    </div>
+
+    <!-- Ukryty przycisk w prawym górnym rogu -->
+    <button id="hiddenButton" class="hidden">!</button>
+
+    <!-- Panel administratora -->
+    <div id="adminPanel" class="hidden">
+        <h3>Panel Admina</h3>
+        <div id="ipList">
+            <!-- IP użytkowników, którzy kliknęli przycisk -->
         </div>
     </div>
 

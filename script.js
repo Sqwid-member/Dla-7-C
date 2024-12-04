@@ -6,7 +6,7 @@ const createAccountForm = document.getElementById('createAccountForm');
 const errorMessage = document.getElementById('error-message');
 const hiddenButton = document.getElementById('hiddenButton');
 const adminPanel = document.getElementById('adminPanel');
-const ipList = document.getElementById('ipList');
+const adminButton = document.getElementById('adminButton');
 
 // Data Storage (replace with actual server-side handling later)
 let users = JSON.parse(localStorage.getItem('users')) || [];
@@ -55,13 +55,12 @@ loginButton.addEventListener('click', () => {
     hiddenButton.classList.remove('hidden');
 });
 
-// Log IP of users who clicked the button
+// Show admin panel with button
 hiddenButton.addEventListener('click', () => {
-    const userIp = 'IP ' + Math.floor(Math.random() * 999999); // Placeholder for IP
-    const listItem = document.createElement('p');
-    listItem.textContent = userIp;
-    ipList.appendChild(listItem);
-
-    // Show admin panel
     adminPanel.classList.remove('hidden');
+});
+
+// Admin button (you can add functionality here)
+adminButton.addEventListener('click', () => {
+    alert('Przycisk admina kliknięty');
 });

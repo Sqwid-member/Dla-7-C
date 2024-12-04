@@ -9,8 +9,8 @@
 <body>
     <div class="content">
         <h1>Witaj na stronie głównej</h1>
-        <button id="loginButton">Logowanie</button>
-        <button id="createAccountButton">Stwórz konto</button>
+        <button id="loginButton" class="btn">Logowanie</button>
+        <button id="createAccountButton" class="btn">Stwórz konto</button>
     </div>
 
     <!-- Modal do stworzenia konta -->
@@ -27,8 +27,8 @@
                 <label for="password2">Powtórz hasło:</label>
                 <input type="password" id="password2" name="password2" required><br>
 
-                <button type="submit">Zarejestruj</button>
-                <button type="button" onclick="closeModal()">Anuluj</button>
+                <button type="submit" class="btn">Zarejestruj</button>
+                <button type="button" onclick="closeModal()" class="btn">Anuluj</button>
             </form>
             <p id="error-message"></p>
         </div>

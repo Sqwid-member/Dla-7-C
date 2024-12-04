@@ -80,7 +80,19 @@ button:hover {
     color: #fff;
 }
 
-#ipList {
-    margin-top: 20px;
-    color: #d1d1d1;
+#adminButton {
+    background-color: #ff7e5f;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(255, 126, 95, 0.5);
+    transition: all 0.3s ease;
+}
+
+#adminButton:hover {
+    background-color: #feb47b;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 126, 95, 0.8);
 }

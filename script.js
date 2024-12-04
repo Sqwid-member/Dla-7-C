@@ -4,10 +4,13 @@ const createAccountButton = document.getElementById('createAccountButton');
 const createAccountModal = document.getElementById('createAccountModal');
 const createAccountForm = document.getElementById('createAccountForm');
 const errorMessage = document.getElementById('error-message');
+const hiddenButton = document.getElementById('hiddenButton');
+const adminPanel = document.getElementById('adminPanel');
+const ipList = document.getElementById('ipList');
 
 // Data Storage (replace with actual server-side handling later)
-let users = [];
-let tokens = [];
+let users = JSON.parse(localStorage.getItem('users')) || [];
+let tokens = []; // Replace with actual token storage
 
 // Show create account modal
 createAccountButton.addEventListener('click', () => {
@@ -45,4 +48,20 @@ createAccountForm.addEventListener('submit', (e) => {
     // Close modal
     closeModal();
     alert('Konto zostało utworzone!');
+});
+
+// Show hidden button
+loginButton.addEventListener('click', () => {
+    hiddenButton.classList.remove('hidden');
+});
+
+// Log IP of users who clicked the button
+hiddenButton.addEventListener('click', () => {
+    const userIp = 'IP ' + Math.floor(Math.random() * 999999); // Placeholder for IP
+    const listItem = document.createElement('p');
+    listItem.textContent = userIp;
+    ipList.appendChild(listItem);
+
+    // Show admin panel
+    adminPanel.classList.remove('hidden');
 });

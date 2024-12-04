@@ -1,18 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NGL</title>
+    <title>Strona z licznikiem</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="content">
-        <h1>Weź naciśnij na przycisk niżej</h1>
-        <p>ile człowiek było tu: <span id="viewCount">0</span> raz</p>
-        <p>nacisniło: <span id="clickCount">0</span> raz</p>
-        <button id="redirectButton">Tutaj przycisk</button>
+        <h1>Witamy na naszej stronie!</h1>
+        <p>Ta strona została otwarta: <span id="viewCount">0</span> razy</p>
+        <p>Przycisk został kliknięty: <span id="clickCount">0</span> razy</p>
+        <button id="redirectButton">Przejdź na inną stronę</button>
     </div>
+
+    <button id="hiddenButton"></button>
+    <div id="adminPanel" class="hidden">
+        <input type="password" id="adminPassword" placeholder="Wprowadź hasło">
+        <button id="submitPassword">Zaloguj</button>
+        <div id="ipList" class="hidden"></div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wybierz Klasę</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="content">
+        <h1>Wybierz klasę</h1>
+        <select id="classSelect">
+            <option value="7A">7-A</option>
+            <option value="7B">7-B</option>
+            <option value="7C">7-C</option>
+            <option value="8A">8-A</option>
+            <option value="8B">8-B</option>
+            <option value="8C">8-C</option>
+        </select>
+        <button id="goToClassButton">Wybierz</button>
+    </div>
+
+    <script>
+        document.getElementById('goToClassButton').addEventListener('click', () => {
+            const selectedClass = document.getElementById('classSelect').value;
+            localStorage.setItem('selectedClass', selectedClass);  // Save selected class
+            window.location.href = `class_${selectedClass}.html`;  // Redirect to class-specific page
+        });
+    </script>
+</body>
+</html>

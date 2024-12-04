@@ -3,22 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strona z licznikiem</title>
+    <title>Strona Główna</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="content">
-        <h1>Witamy na naszej stronie!</h1>
-        <p>Ta strona została otwarta: <span id="viewCount">0</span> razy</p>
-        <p>Przycisk został kliknięty: <span id="clickCount">0</span> razy</p>
-        <button id="redirectButton">Przejdź na inną stronę</button>
+        <h1>Witaj na stronie głównej</h1>
+        <button id="loginButton">Logowanie</button>
+        <button id="createAccountButton">Stwórz konto</button>
     </div>
 
-    <button id="hiddenButton"></button>
-    <div id="adminPanel" class="hidden">
-        <input type="password" id="adminPassword" placeholder="Wprowadź hasło">
-        <button id="submitPassword">Zaloguj</button>
-        <div id="ipList" class="hidden"></div>
+    <!-- Modal do stworzenia konta -->
+    <div id="createAccountModal" class="modal">
+        <div class="modal-content">
+            <h2>Stwórz konto</h2>
+            <form id="createAccountForm">
+                <label for="username">Login:</label>
+                <input type="text" id="username" name="username" required><br>
+
+                <label for="password1">Hasło:</label>
+                <input type="password" id="password1" name="password1" required><br>
+
+                <label for="password2">Powtórz hasło:</label>
+                <input type="password" id="password2" name="password2" required><br>
+
+                <button type="submit">Zarejestruj</button>
+                <button type="button" onclick="closeModal()">Anuluj</button>
+            </form>
+            <p id="error-message"></p>
+        </div>
     </div>
 
     <script src="script.js"></script>
